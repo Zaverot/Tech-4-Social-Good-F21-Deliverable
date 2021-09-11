@@ -76,7 +76,7 @@ const EditCaseModal: React.FC<EditCaseModalProps> = (props: EditCaseModalProps) 
         Edit Case
         <br/>
         {data
-            ? data.cases.map((category: any) => {
+            ? data.cases.map((category: any, key: number) => {
                 return <h3> {category.name} </h3>
               })
             : "Something went wrong"}
