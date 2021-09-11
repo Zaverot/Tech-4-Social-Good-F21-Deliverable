@@ -16,6 +16,7 @@ import {
   ManagementCategory,
   ManagementContainerQuery,
 } from "../CaseManagementContainer";
+import { Category } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -76,8 +77,8 @@ const EditCaseModal: React.FC<EditCaseModalProps> = (props: EditCaseModalProps) 
         Edit Case
         <br/>
         {data
-            ? data.cases.map((category: any, key: number) => {
-                return <h3> {category.name} </h3>
+            ? data.cases.map((category: any, index: number) => {
+                return <h3 key={index}> {category.name} </h3>
               })
             : "Something went wrong"}
       </Typography>
